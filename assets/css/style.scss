@@ -1,0 +1,489 @@
+@import './variable';
+
+body{
+    font-family: $font;
+    position: relative;
+}
+
+.wa-wrapper{
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    border: none;
+    cursor: pointer;
+    z-index: 99;
+    transition: 0.2s all ease;
+
+    a{
+        background-color: #25D366;
+        padding: 14px 12px 16px;
+        border-radius: 100px;
+
+        i{
+            color: $white;
+            font-size: 30px;
+            vertical-align: middle;
+        }
+    }
+}
+
+
+.scroll-top{
+    display: none; 
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border: none;
+    cursor: pointer;
+    z-index: 99;
+    transition: 0.2s all ease;
+
+    a{
+        background-color: $white;
+        border: 1px solid $primary-color;
+        padding: 14px 16px 10px;
+        border-radius: 100px;
+
+        i{
+            color: $primary-color;
+            font-size: 20px;
+        }
+    }
+}
+
+.iti{
+    width: 100%;
+}
+
+header{
+    .strip-1{
+        background: $default-gradient;
+        color: $white;
+        .contact-list{
+            li{
+                a{
+                    text-decoration: none;
+                    color: $white;
+                    font-family: $font-2;
+                }
+            }
+        }
+        .social-list{
+            li{
+                a{
+                    text-decoration: none;
+                    color: $white;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    .navbar{
+        background-color: $white !important;
+        font-family: $font-2;
+        z-index: 1;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        position: relative;
+        .navbar-nav{
+            .nav-link{
+                color: $primary-color;
+                font-size: 17px;
+                margin: 0 10px;
+                &:hover, &.active{
+                    color: $secondary-color;
+                }
+            }
+        }
+        .default-btn{
+            @include primary-btn;
+            cursor: pointer;
+        }
+        &.fixed{
+            position: fixed;
+            top: 0;
+            width: 100%;
+            left: 0;
+            border-radius: 0;
+            z-index: 99;
+            animation: smoothScroll 1s forwards;
+        }
+        @keyframes smoothScroll {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100%{
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .default-btn{
+            display: none;
+        }
+        .navbar-toggler{
+            border-color: $secondary-color;
+            .navbar-toggler-icon{
+                background-image: none;
+                i{
+                    font-size: 30px;
+                    color: $primary-color;
+                }
+            }
+        }
+        .navbar-collapse{
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: $white;
+            padding: 10px 0 10px 20px;
+        }
+    }
+}
+/* Banner Start */
+.banner{
+    padding: 80px 0;
+    position: relative;
+    background: url(../images/banner.webp);
+    background-position: center;
+    background-size: cover;
+    .wa-btn{
+        @include primary-btn;
+        padding: 10px 15px 10px 15px !important;
+        width: auto;
+    }
+    .title{
+        color: $white;
+        h2{
+            font-size: 50px;
+        }
+        h6{
+            font-size: 28px;
+        }
+    }
+    .banner-form{
+        background-color: $white;
+        padding: 15px;
+        border-radius: 12px;
+    }
+
+    @media screen and (max-width: 767px) {
+        .title{
+            text-align: center;
+            margin-bottom: 20px;
+            h2{
+                font-size: 30px;
+            }
+            h6{
+                font-size: 24px;
+            }
+        }
+    }
+}
+/* Banner End */
+/* Footer Start */
+footer{
+    background-color: $primary-color;
+    padding: 220px 0 20px;
+    position: relative;
+    color: $white;
+    font-family: $font-2;
+    margin-top: 50px;
+
+    .footer-image-wrapper{
+        position: absolute;
+        top: -8%;
+        width: 100%;
+        img{
+            width: 100%;
+        }
+    }
+    .footer-title-wrapper{
+        margin-bottom: 60px;
+        h4{
+            font-size: 50px;
+            font-weight: $font-medium;
+            font-family: $font-2;
+        }
+        .quote-wrapper{
+            a{
+                @include white-btn;
+            }
+        }
+    }
+    .logo{
+        width: 250px;
+    }
+
+    .footer-wrapper{
+        li{
+            margin: 10px 0;
+            a{
+                text-decoration: none;
+                color: $white;
+                font-size: 18px;
+            }
+        }
+    }
+    .copyright-wrapper{
+        border-top: 1px solid #ffffff4d;
+        .social-list{
+            li{
+                a{
+                    i{
+                        color: $white;
+                        font-size: 24px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        padding: 110px 0 20px;
+        .footer-image-wrapper{
+            top: -3%;
+        }
+        .quote-wrapper{
+            a{
+                margin-bottom: 20px;
+            }
+        }
+        
+    }
+}
+/* Footer End */
+/* Privacy Start */
+.privacy-wrapper{
+    h6{
+        font-weight: $font-bold;
+    }
+}
+/* Privacy End */
+/* Cart Page Start */
+    .cart-banner{
+        padding: 60px 0;
+        font-family: $font-2;
+       h2{
+        font-size: 50px;
+        color: $primary-color;
+        font-weight: $font-bold;
+        font-family: $font-2;
+       }
+
+       .image-wrapper{
+        border-radius: 20px;
+        overflow: hidden;
+       }
+
+       .cart-treatment{
+
+        h6{
+            font-size: 22px;
+            font-weight: $font-bold;
+            color: $primary-color;
+        }
+
+        p{
+            a{
+                color: $secondary-color;
+                text-decoration: none;
+            }
+        }
+
+        ul{
+            li{
+                margin: 10px 0;
+                &::marker{
+                    color: $secondary-color;
+                    font-size: 20px;
+                }
+            }
+        }
+       }
+    }
+
+    .cart-desc{
+        background-color: $light-bg;
+    padding: 60px 0;
+
+    .title{
+        font-family: $font-2;
+        margin-bottom: 30px;
+        text-align: center;
+
+        h5{
+            color: $primary-color;
+            font-size: 40px;
+            font-weight: $font-bold;
+        }
+    }
+
+        .card{
+            position: relative;
+            margin: 15px 0;
+            position: relative;
+            padding: 40px;
+            height: 260px;
+            border: 0;
+            border-radius: 20px;
+            overflow: hidden;
+            font-family: $font-2;
+            border-bottom-right-radius: 60px;
+
+            h6{
+                color: $primary-color;
+                font-size: 22px;
+                font-weight: $font-bold;
+            }
+
+            p{
+                margin: auto 0;
+            }
+            
+            .image-wrapper{
+                width: 70px;
+                height: 70px;
+                margin: auto;
+                transition: all 0.5s ease-in-out 0s;
+            }
+
+            .no{
+                position: absolute;
+                font-size: 100px;
+                font-weight: 900;
+                color: $secondary-color;
+                opacity: 0.3;
+                bottom: -16%;
+                right: 20px;
+            }
+        }
+
+    }
+/* Cart Page End */
+/* FAQ Start*/
+.faq{
+    padding: 50px 0;
+    position: relative;
+    overflow: hidden;
+    h2{
+        font-size: 50px;
+        color: $primary-color;
+        font-weight: $font-bold;
+        font-family: $font-2;
+       }
+    .accordion{
+        transition: 0.3s all ease;
+        padding-bottom: 10px;
+        height: 550px;
+        .accordion-item{
+            border: 0;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            border-radius: 13px;
+            margin: 20px;
+            .accordion-header{
+                .accordion-button{
+                    font-weight: $font-bold;
+                    color: $primary-color;
+                    text-decoration: none;
+                    border: 0;
+                    font-size: 18px;
+                    background: none;
+                    text-align: left;
+                    box-shadow: none;
+                }
+            }
+            .accordion-body{
+                color: $text-color;
+                a{
+                    text-decoration: none;
+                    color: $pink;
+                }
+            }
+        }
+    }
+    .contact-title{
+        margin: 20px 0 40px;
+        h4{
+            font-size: 40px;
+            font-weight: $font-bold;
+            color: $primary-color;
+            a{
+                text-decoration: none;
+                font-size: 35px;
+                color: $secondary-color;
+            }
+     
+        }
+        h6{
+            font-size: 30px;
+            font-weight: $font-medium;
+            text-transform: capitalize;
+            color: $primary-color;
+        }
+    }
+    .form{
+        background-color: $white;
+        padding: 15px;
+        border-radius: 12px;
+    }
+    .wa-btn{
+        @include primary-btn;
+        padding: 10px 15px 10px 15px !important;
+        width: auto;
+    }
+
+    @media screen and (max-width: 768px) {
+        .accordion{
+            height: auto;
+            .accordion-item{
+                margin: 20px 0;
+            }
+        }
+    }
+}
+/* FAQ End */
+/* Modal */
+.modal{
+    .modal-header{
+        padding:15px 20px;
+        background: $secondary-color;
+        h5{
+            color: $white;
+            font-family: $font-2;
+            margin-bottom: 0
+        }
+    }
+
+    .wa-btn{
+        @include primary-btn;
+        padding: 10px 15px 10px 15px !important;
+        width: auto;
+    }
+}
+
+.feedback {
+    background-color : $secondary-color;
+    color: #fff !important;
+    padding: 10px 20px;
+    padding-bottom: 10px !important;
+    border-radius: 4px;
+    border-color: $secondary-color;
+    text-decoration: none;
+    }
+    #mybutton {
+    position: fixed;
+    bottom: 50%;
+    right: -50px;
+    z-index: 99999;
+    cursor: pointer;
+    transform: rotate(-90deg);
+    }
+    .intl-tel-input {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    }
+/* Modal */

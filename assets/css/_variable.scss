@@ -1,0 +1,91 @@
+
+$font: 'Poppins', sans-serif;
+$font-2: 'Inter', sans-serif;
+
+$primary-color: #160845;
+$secondary-color: #5028a6;
+$pink: #df63a7;
+$light-blue: #d3e3fd;
+$white: #fff;
+$black: #000;
+$light-bg: #eef5f1;
+$text-color: #333333;
+$btn-color: #26C943;
+$content-bg: #FFF0FB;
+$section-bg: #F7F7FF;
+$title-color: #353535;
+$light-secondary: #cac2dd;
+$footer-bg: #cac2db;
+$default-gradient: linear-gradient(90deg, rgba(22,8,69,1) 0%, rgba(80,40,166,1) 68%, rgba(223,99,167,1) 100%);
+$reverse-gradient: transparent linear-gradient(90deg, $pink 0%, $secondary-color 70%, rgba(22,8,69,1) 100%) 0% 0% no-repeat padding-box;
+$btn-gradient: linear-gradient(90deg, rgb(22, 8, 69) 0%, rgb(80, 40, 166) 100%);
+
+$font-thin: 100;
+$font-light: 300;
+$font-regular: 400;
+$font-medium: 500;
+$font-bold: 600;
+$font-black: 700;
+
+$box-shadow-1: 0px 10px 35px 0px rgba(0, 0, 0, 0.07);
+$box-shadow-2: 0px 8px 12px 2px rgba(0, 0, 0, 0.15);
+$header-shadow: 0px 10px 20px 0px rgba(0,0,0,0.1);
+
+p{font-family: $font-2,}
+
+@mixin primary-btn{
+    background: $default-gradient;
+    padding: 10px 15px 10px 30px !important;
+    color: #fff;
+    border-radius: 12px !important;
+    width: 180px;
+    float: left;
+    position: relative;
+    font-size: 18px;
+    text-decoration: none;
+    border: 0 !important;
+    transition: all 0.3s ease-out 0s;
+
+    i{
+        width: 37px;
+        height: 37px;
+        line-height: 40px;
+        background: #ffffff17 0% 0% no-repeat padding-box;
+        position: absolute;
+        right: 4px;
+        top: 4px;
+        border-radius: 12px;
+        text-align: center;
+    }
+
+    &:hover{
+        background: $reverse-gradient;
+        transition: all 0.3s ease-out 0s;
+    }
+}
+
+@mixin white-btn{
+    background-color: $white;
+    padding: 10px 15px 10px 30px;
+    color: $primary-color;
+    border-radius: 30px;
+    width: 200px;
+    float: left;
+    font-weight: $font-medium;
+    font-family: $font-2;
+    text-decoration: none;
+    font-size: 22px;
+    box-shadow: 3px 5px 8px $secondary-color;
+    i{
+     margin-left: 5px;
+     }
+}
+
+@mixin submit-btn{
+    border: 0;
+    width: 280px;
+    margin-left: 20px;
+    span{
+       float: left;
+    }
+}
