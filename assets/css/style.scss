@@ -44,13 +44,13 @@ header{
                 }
             }
         }
-        .social-list{
-            li{
-                a{
-                    text-decoration: none;
-                    color: $white;
-                    font-size: 18px;
-                }
+        .wa-btn{
+            background-color: #25D366;
+            padding: 10px 15px;
+            border-radius: 12px;
+
+            &:hover{
+                background-color: #2d8e20;
             }
         }
     }
@@ -95,9 +95,6 @@ header{
         }
     }
     @media screen and (max-width: 768px) {
-        .default-btn{
-            display: none;
-        }
         .navbar-toggler{
             border-color: $secondary-color;
             .navbar-toggler-icon{
@@ -145,6 +142,34 @@ header{
         border-radius: 12px;
     }
 
+
+    .card{
+        width: 25%;
+        margin: 10px 10px;
+        padding: 20px 15px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        .card-body{
+            padding: 0;
+            text-align: center;
+            margin-top: 10px;
+
+            h6{
+                margin-bottom: 0;
+                font-family: $font-2;
+            }
+        }
+        .image-wrapper{
+            height: 60px;
+            width: 60px;
+            margin: auto;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .card{
+            width: 30%;
+        }
+    }
     @media screen and (max-width: 767px) {
         .title{
             text-align: center;
@@ -155,6 +180,15 @@ header{
             h6{
                 font-size: 24px;
             }
+        }
+        .card{
+            width: 45%;
+        }
+    }
+
+    @media screen and (max-width: 420px) {
+        .card{
+            width: 100%;
         }
     }
 }
@@ -283,7 +317,7 @@ footer{
 
     .cart-desc{
         background-color: $light-bg;
-    padding: 60px 0;
+        padding: 60px 0;
 
     .title{
         font-family: $font-2;
@@ -337,8 +371,95 @@ footer{
             }
         }
 
+
+        @media screen and (max-width: 520px) {
+            .card{
+                height: auto;
+            }
+        }
     }
 /* Cart Page End */
+/* Doctor Start */
+.doctors{
+    background-color: $light-bg;
+    padding: 60px 0;
+
+    .title{
+        font-family: $font-2;
+        margin-bottom: 30px;
+        text-align: center;
+
+        h5{
+            color: $primary-color;
+            font-size: 40px;
+            font-weight: $font-bold;
+        }
+    }
+    .card{
+        position: relative;
+        margin: 15px 0;
+        border: 0;
+        border-radius: 12px;
+        font-family: $font-2;
+        overflow: hidden;
+        
+        .image-wrapper{
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .card-body{
+            text-align: center;
+            font-family: $font-2;
+            h6{
+                color: $primary-color;
+                font-size: 22px;
+                font-weight: $font-bold;
+                font-family: $font;
+            }
+    
+            p{
+                margin-bottom: 10px;
+                font-weight: $font-medium;
+            }
+
+            span{
+                color: $secondary-color;
+            }
+        }
+
+        .wa-btn{
+            background-color: #21b156;
+            padding: 10px 15px;
+            border-radius: 12px;
+            margin: 0 auto 20px;
+
+            a{
+                text-decoration: none;
+                color: $white;
+                font-weight: $font-medium;
+            }
+
+            &:hover{
+                background-color: #2d8e20;
+            }
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        .card{
+            .image-wrapper{
+                height: auto;
+            }
+        }
+        .title{
+            h5{
+                font-size: 30px;
+            }
+        }
+    }
+}
+/* Doctor End */
 /* FAQ Start*/
 .faq{
     padding: 50px 0;
